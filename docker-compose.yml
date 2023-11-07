@@ -1,0 +1,10 @@
+version: "3.3"
+
+services:
+  hie-resource-browser:
+    image: registry.gitlab.com/rbc5/hie-resource-browser:dev
+#    restart: on-failure
+    ports:
+      - '7302:80'
+    environment:
+      - "REACT_APP_BASE_URL='https://coreapi.kwigira.org'"
